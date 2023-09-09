@@ -1,13 +1,31 @@
+/* The container that will be the backdrop to your main content. */
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 50px); /* Adjust height to exclude the footer */
   text-align: center;
-  margin-top: 50px;
 }
 
+/* Gives depth to the main content box. */
+.bg-white {
+  box-shadow: 0 4px 10px rgba(111, 105, 105, 0.1);
+}
+
+/* Adjust button to have more modern touch. */
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 12px 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: blue;
+}
+
+/* Button hover effect to give feedback. */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(81, 108, 139, 0.3);
+}
+
+/* Footer styling to ensure it's slightly distinguished from content. */
+footer {
+  background: rgba(0, 0, 0, 0.03);
 }

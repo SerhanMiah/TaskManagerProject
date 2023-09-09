@@ -1,0 +1,38 @@
+<h1 class="mb-4">Tasks</h1>
+
+<div *ngIf="tasks && tasks.length > 0; else noTasks">
+    <div *ngFor="let task of tasks" class="card mb-3">
+        <div class="card-header bg-primary text-white">
+            {{ task.title }}
+            <span class="badge badge-light float-right">{{ task.dueDate | date }}</span>
+        </div>
+        <div class="card-body">
+            <p class="card-text"><strong>Description:</strong> {{ task.description }}</p>
+            <p class="card-text"><strong>Project:</strong> {{ task.project.name }}</p>
+            <p class="card-text">
+                <strong>Priority:</strong>
+                <span class="badge" [ngClass]="{
+                   
+                }">{{ task.priority.level }}</span>
+            </p>
+            <p class="card-text"><strong>Tag:</strong> <span class="badge badge-info">{{ task.tag.name }}</span></p>
+            
+            <div *ngIf="task.comments && task.comments.length">
+                <strong>Comments:</strong>
+                <ul class="list-group list-group-flush">
+                    <li *ngFor="let comment of task.comments" class="list-group-item">
+                        {{ comment.content }} 
+                        <br>
+                        <small class="text-muted">Posted by: {{ comment.postedBy }} on {{ comment.datePosted | date }}</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #noTasks>
+    <div class="alert alert-warning">
+        No tasks available.
+    </div>
+</ng-template>

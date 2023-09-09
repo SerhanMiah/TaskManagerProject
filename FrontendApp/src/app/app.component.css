@@ -1,3 +1,35 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+/* Root styles to ensure full height layout */
+html, body, .app-container {
+    height: 100%;
+    margin: 0;
+}
+
+/* Navbar will have its intrinsic height */
+app-navbar {
+    width: 100%;
+}
+
+/* Content will fill the remaining space */
+.content {
+    flex: 1 0 auto; /* This ensures the content area grows/shrinks as needed */
+    width: 100%;
+    padding: 20px; /* Optional padding for content */
+}
+
+/* Footer */
+app-footer {
+    width: 100%;
+    flex-shrink: 0; /* This ensures the footer doesn't shrink if the content is too tall */
+}
+
+/* Making the container a flexbox ensures proper layout distribution */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Ensure children stretch to full width */
+}

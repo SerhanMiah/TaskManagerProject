@@ -1,0 +1,126 @@
+<main class="form-page">
+    <div class="container register-form crunch-form">
+        <div class="row justify-content-md-center">
+            <div class="col-12 col-md-6">
+                <h1>Register</h1>
+                <form (submit)="handleSubmit($event)">
+                    <div class="form-group mb-3">
+                        <label for="FirstName">First Name</label>
+                        <input 
+                            [(ngModel)]="model.FirstName" 
+                            class="form-control" 
+                            type="text" 
+                            id="FirstName"
+                            name="FirstName" 
+                            placeholder="Enter your first name" 
+                            required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="LastName">Last Name</label>
+                        <input 
+                            [(ngModel)]="model.LastName" 
+                            class="form-control" 
+                            type="text" 
+                            id="LastName"
+                            name="LastName" 
+                            placeholder="Enter your last name" 
+                            required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="Email">Email</label>
+                        <input 
+                            [(ngModel)]="model.Email" 
+                            class="form-control" 
+                            type="email" 
+                            id="Email"
+                            name="Email" 
+                            placeholder="Enter your email" 
+                            required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="Password">Password</label>
+                        <input 
+                            [(ngModel)]="model.Password" 
+                            class="form-control" 
+                            type="password" 
+                            id="Password"
+                            name="Password" 
+                            placeholder="Enter your password" 
+                            required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="Address">Address</label>
+                        <input 
+                            [(ngModel)]="model.Address" 
+                            class="form-control" 
+                            type="text" 
+                            id="Address"
+                            name="Address" 
+                            placeholder="Enter your address" 
+                            required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="City">City</label>
+                        <input 
+                            [(ngModel)]="model.City" 
+                            class="form-control" 
+                            type="text" 
+                            id="City"
+                            name="City" 
+                            placeholder="Enter your city" 
+                            required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="State">State</label>
+                        <input 
+                            [(ngModel)]="model.State" 
+                            class="form-control" 
+                            type="text" 
+                            id="State"
+                            name="State" 
+                            placeholder="Enter your state" 
+                            required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="PostalCode">Postal Code</label>
+                        <input 
+                            [(ngModel)]="model.PostalCode" 
+                            class="form-control" 
+                            type="text" 
+                            id="PostalCode"
+                            name="PostalCode" 
+                            placeholder="Enter your postal code" 
+                            required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="Country">Country</label>
+                        <input 
+                            [(ngModel)]="model.Country" 
+                            class="form-control" 
+                            type="text" 
+                            id="Country"
+                            name="Country" 
+                            placeholder="Enter your country" 
+                            required>
+                    </div>
+
+                    <div *ngIf="errors" class="text-danger">
+                        {{ errors }}
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Register
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>

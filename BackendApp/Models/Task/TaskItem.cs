@@ -11,10 +11,10 @@ namespace BackendApp.Models
 
         [Required]
         [StringLength(100)]
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         [StringLength(500)]
-        public string Description { get; set; }
+        public string? Description { get; set; }
         public bool IsCompleted { get; set; }
 
         [DataType(DataType.Date)]
@@ -31,5 +31,8 @@ namespace BackendApp.Models
         // Tag relation (assuming a one-to-many relation for simplicity)
         public Tag Tag { get; set; }
         public int TagId { get; set; }
+
+        public ICollection<Comment> Comments { get; set; }
+
     }
 }

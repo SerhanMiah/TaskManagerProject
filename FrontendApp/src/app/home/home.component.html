@@ -1,11 +1,16 @@
-<div class="container mx-auto mt-20 px-4 md:px-0">
-  <div class="bg-white shadow-xl rounded-xl p-10">
-    <h1 class="text-4xl font-semibold mb-5">Welcome to the Task Manager!</h1>
-    <p class="text-lg mb-5">
-        Manage your tasks efficiently and never miss a deadline.
-    </p>
-    <button (click)="navigateToTasks()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue transition duration-200">
-        Go to Tasks
-    </button>
+<div class="flex flex-col h-screen bg-gray-100">
+  <div class="flex-grow container mx-auto mt-20 px-4 md:px-0">
+      <div class="max-w-md mx-auto bg-white shadow-2xl rounded-xl p-10">
+          <h1 class="text-4xl font-semibold mb-5 text-blue-600">Welcome to the Task Manager!</h1>
+          <p class="text-lg mb-5 text-gray-700">
+              Manage your tasks efficiently and never miss a deadline.
+          </p>
+          <button (click)="navigateToTasks()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue transition duration-200">
+              Go to Tasks
+          </button>
+      </div>
   </div>
+  <!-- <div class="flex-none text-center py-4 text-gray-500">
+      &copy; 2023 Task Manager. All rights reserved.
+  </div> -->
 </div>

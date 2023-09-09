@@ -1,0 +1,72 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f8fc;
+}
+
+h1 {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Card styles */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: scale(1.02); /* Slight scaling effect on hover for interactivity */
+}
+
+.card-header {
+    font-size: 1.25em;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-text {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Badges */
+.badge {
+    font-weight: 600;
+}
+
+/* Comment styles */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* No tasks alert */
+.alert {
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Other styling enhancements */
+small {
+    display: block;
+    margin-top: 0.5em;
+    color: #777;
+}
+
+hr {
+    margin: 2em 0;
+    border-top: 1px solid #eee;
+}

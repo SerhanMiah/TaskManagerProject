@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="../build/BackendApp.props" />
+  <Import Project="..\build\BackendApp.props" />
 </Project>
